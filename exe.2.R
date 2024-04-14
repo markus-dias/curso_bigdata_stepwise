@@ -42,8 +42,9 @@ maq_cafe <- function(lista_numeros, n_maquinas_cafe) {
   
 }
 
+print(maq_cafe(pedido_cenario_01,n_maquinas_cafe_cenario_01))
 print(maq_cafe(pedido_02,n_maquinas_cafe_cenario_02))
 
 ### Output esperado
-4????
-6
+# 4????
+# 6

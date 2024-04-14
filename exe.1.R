@@ -30,3 +30,7 @@ minha_mediana <- function(lista){
 
 a <- minha_mediana(lista_numeros_01)
 b <- minha_mediana(lista_numeros_02)
+
+print(a)
+print(b)
+
