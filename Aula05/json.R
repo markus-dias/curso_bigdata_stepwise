@@ -4,10 +4,21 @@
 ### https://search.r-project.org/CRAN/refmans/rjsoncons/html/paths_and_pointer.html
 ###
 
-require("jsonlite")
-require("rjsoncons")
+if (!require("jsonlite")) {
+  install.packages("jsonlite")
+  require("jsonlite")
+}
+if (!require("rjsoncons")) {
+  install.packages("rjsoncons")
+  require("rjsoncons")
+}
 if (!require("dplyr")) {
   install.packages("dplyr")
+  require("dplyr")
+}
+if (!require("here")) {
+  install.packages("here")
+  require("here")
 }
 
 caminho_arquivos <- here("Aula05", "dados/carros_eletricos.json")
@@ -15,7 +26,7 @@ caminho_arquivos <- here("Aula05", "dados/carros_eletricos.json")
 carros_eletricos <- fromJSON(caminho_arquivos, flatten = TRUE)
 print(carros_eletricos)
 
-resultado_busca_jsonpath <- jsonpath(carros_eletricos, "$.meta", as = "R")
+resultado_busca_jsonpath <- jsonpath(carros_eletricos, "$.data", as = "R")
 print(resultado_busca_jsonpath)
 
 dados_carros_eletricos <- carros_eletricos$data

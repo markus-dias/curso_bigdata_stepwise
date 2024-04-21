@@ -30,7 +30,7 @@ exemplo_02_fwf <- read_fwf(
     exemplo01,
     fwf_cols(
         Last_Name = 8,
-        First_Name = 12,
+        First_Name = 9,
         Birth_Date = 5,
         Death_Date = 8
     )

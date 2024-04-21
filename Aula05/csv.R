@@ -4,7 +4,11 @@ require("dtplyr")
 require("arrow")
 require("here")
 require("stringr")
-library("pryr")
+if (!require("pryr")) {
+  install.packages("pryr")
+  require("pryr")
+}
+
 
 caminho_arquivos_csv <- here("Aula05", "dados/carros_eletricos.csv")
 caminho_arquivos_tsv <- here("Aula05", "dados/carros_eletricos2.csv")
