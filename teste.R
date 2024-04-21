@@ -20,8 +20,15 @@ install.packages("tibble")
 library(tibble)
 install.packages("dplyr")
 library(dplyr)
-install.packages("languageserver")
+install.packages("readr")
 library(languageserver)
+
+install.packages("data.table")
+require("dplyr")
+install.packages("dtplyr")
+install.packages("arrow")
+require("here")
+install.packages("stringr")
 
 dados_iris <- as.data.frame(datasets::iris)
 
